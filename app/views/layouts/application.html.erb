@@ -39,8 +39,11 @@
           <ul class="menu">
             <li><input type="search" placeholder="Search"></li>
             <li><button type="button" class="button">Search</button></li>
-            <li>|</li>
-            <li><button type="button" class="button">Login</button></li>
+            <% if (current_user) %>
+              <li><%= link_to current_user.name + " - Log Off", logout_path %></li>
+            <% else %>
+              <li><%= link_to "Login", login_path %></li>
+            <% end %>
           </ul>
 
         </div>
@@ -50,9 +53,7 @@
     <%= yield %>
 
     <div class="row">
-      <div class="small-12 large-12 columns" >
-        <%= image_tag "CGSpie.png", :class=>"imgpie" %>
-      </div>
+      <%= image_tag "CGSpie.png", :class=>"imgpie" %>
     </div>
 
   </body>
