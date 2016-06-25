@@ -1,0 +1,33 @@
+<%= form_for(@direccion) do |f| %>
+  <% if @direccion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@direccion.errors.count, "error") %> prohibited this direccion from being saved:</h2>
+
+      <ul>
+      <% @direccion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :calle_id %><br>
+    <%= f.number_field :calle_id %>
+  </div>
+  <div class="field">
+    <%= f.label :nro %><br>
+    <%= f.number_field :nro %>
+  </div>
+  <div class="field">
+    <%= f.label :pdepto %><br>
+    <%= f.text_field :pdepto %>
+  </div>
+  <div class="field">
+    <%= f.label :acceso %><br>
+    <%= f.text_field :acceso %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

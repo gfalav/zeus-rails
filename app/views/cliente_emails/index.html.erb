@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cliente Emails</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cliente</th>
+      <th>Email</th>
+      <th>Tipoemail</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cliente_emails.each do |cliente_email| %>
+      <tr>
+        <td><%= cliente_email.cliente_id %></td>
+        <td><%= cliente_email.email %></td>
+        <td><%= cliente_email.tipoemail_id %></td>
+        <td><%= link_to 'Show', cliente_email %></td>
+        <td><%= link_to 'Edit', edit_cliente_email_path(cliente_email) %></td>
+        <td><%= link_to 'Destroy', cliente_email, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cliente email', new_cliente_email_path %>

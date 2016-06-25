@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Calle:</strong>
+  <%= @direccion.calle_id %>
+</p>
+
+<p>
+  <strong>Nro:</strong>
+  <%= @direccion.nro %>
+</p>
+
+<p>
+  <strong>Pdepto:</strong>
+  <%= @direccion.pdepto %>
+</p>
+
+<p>
+  <strong>Acceso:</strong>
+  <%= @direccion.acceso %>
+</p>
+
+<%= link_to 'Edit', edit_direccion_path(@direccion) %> |
+<%= link_to 'Back', direccions_path %>

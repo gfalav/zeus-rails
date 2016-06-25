@@ -1,0 +1,41 @@
+<%= form_for(@cliente_documento) do |f| %>
+  <% if @cliente_documento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cliente_documento.errors.count, "error") %> prohibited this cliente_documento from being saved:</h2>
+
+      <ul>
+      <% @cliente_documento.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cliente_id %><br>
+    <%= f.number_field :cliente_id %>
+  </div>
+  <div class="field">
+    <%= f.label :documento %><br>
+    <%= f.text_field :documento %>
+  </div>
+  <div class="field">
+    <%= f.label :tipodoc_id %><br>
+    <%= f.number_field :tipodoc_id %>
+  </div>
+  <div class="field">
+    <%= f.label :emisordoc_id %><br>
+    <%= f.number_field :emisordoc_id %>
+  </div>
+  <div class="field">
+    <%= f.label :vencimiento %><br>
+    <%= f.date_select :vencimiento %>
+  </div>
+  <div class="field">
+    <%= f.label :codseg %><br>
+    <%= f.text_field :codseg %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

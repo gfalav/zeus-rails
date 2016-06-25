@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Localidad:</strong>
+  <%= @barrio.localidad_id %>
+</p>
+
+<p>
+  <strong>Barrio:</strong>
+  <%= @barrio.barrio %>
+</p>
+
+<%= link_to 'Edit', edit_barrio_path(@barrio) %> |
+<%= link_to 'Back', barrios_path %>

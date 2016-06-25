@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  resources :cliente_webs
+  resources :cliente_emails
+  resources :cliente_telefonos
+  resources :cliente_documentos
+  resources :clientes
+  resources :enumerados
+  resources :direccions
+  resources :calles
+  resources :barrios
+  resources :localidads
+  resources :municipios
+  resources :departamentos
+  resources :provincia
+  resources :pais
   get '/login'  => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'

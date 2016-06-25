@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Enumerados</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Radical</th>
+      <th>Descripcion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @enumerados.each do |enumerado| %>
+      <tr>
+        <td><%= enumerado.radical %></td>
+        <td><%= enumerado.descripcion %></td>
+        <td><%= link_to 'Show', enumerado %></td>
+        <td><%= link_to 'Edit', edit_enumerado_path(enumerado) %></td>
+        <td><%= link_to 'Destroy', enumerado, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Enumerado', new_enumerado_path %>

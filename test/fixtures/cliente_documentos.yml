@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cliente_id: 1
+  documento: MyString
+  tipodoc_id: 1
+  emisordoc_id: 1
+  vencimiento: 2016-06-25
+  codseg: MyString
+
+two:
+  cliente_id: 1
+  documento: MyString
+  tipodoc_id: 1
+  emisordoc_id: 1
+  vencimiento: 2016-06-25
+  codseg: MyString
